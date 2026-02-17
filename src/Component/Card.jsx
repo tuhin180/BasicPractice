@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Card = ({ card }) => {
   return (
@@ -82,9 +83,11 @@ const Card = ({ card }) => {
           </div>
 
           {/* View Recipe Button */}
-          <button className="w-full mt-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold py-3 rounded-xl hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105 shadow-md">
-            View Recipe
-          </button>
+          <Link to={`/recipe/${card.id}`}>
+            <button className="w-full mt-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold py-3 rounded-xl hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105 shadow-md">
+              View Recipe
+            </button>
+          </Link>
         </div>
       </div>
     </>
